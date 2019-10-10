@@ -1,0 +1,18 @@
+/* contactPage.module.css */
+.wrapper{
+    position:relative;
+    top:5em;
+    width:95%;
+    display:flex;
+    margin:0 auto;
+    justify-content: center;
+   }
+
+@media only screen and (max-width: 864px) {
+ .wrapper{
+ flex-direction: column;
+}
+}
+
+
+

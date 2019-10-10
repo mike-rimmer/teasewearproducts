@@ -1,0 +1,91 @@
+/* contactForm.module.css */
+
+.formcard{
+    display:flex;
+    flex-direction: column;
+    margin:40px 20px 20px 20px;
+    padding: 40px 20px 20px 20px;
+    /* width:80vw; */
+    /* height:auto; */
+    width:auto;
+    height:500px;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    box-shadow: 7px 16px 16px rgba(12,12,12,.5);
+    border-radius:10px;
+    /* font-size:1.2em; */
+}
+
+.lineItem{
+    display:flex;
+    /* font-size:1.2em; */
+    margin-top:20px;
+    flex-direction: row;
+}
+
+input{
+    width:50%; 
+    line-height:1em;
+    display:inline-block; 
+    flex:3;
+    /* font-size:1.2em; */
+    margin:5px;
+    padding-left:10px; 
+} 
+
+textarea{
+    display:inline-block;
+    /* font-size:1.2em; */
+    height:auto;
+    flex:3; 
+    padding-left:10px;  
+}
+
+
+label{
+    margin:20px;
+    line-height: 1em;
+    display:inline-block;
+    /* font-size:1.2em; */
+    flex:1;
+    text-align:right;
+}
+
+@media only screen and (max-width: 1024px) {
+    .formcard{
+        margin:10px;
+        padding:5px;
+        display:flex;
+        flex-direction: column;
+        width:auto;
+        height:auto;
+        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        box-shadow: 7px 16px 16px rgba(12,12,12,.5);
+        border-radius:10px;
+        /* font-size:1.2em; */
+    }
+
+    input{
+        width:auto; 
+        line-height:1.2em;
+        display:inline-block; 
+        flex:3;
+        /* font-size:1.2em; */
+        /* margin:5px; */
+        /* padding-left:10px;  */
+    } 
+
+
+    label{
+        width:auto;
+        /* margin:20px; */
+        /* line-height: 1em; */
+        display:inline-block;
+        /* font-size:1em; */
+        flex:1;
+        text-align:right;
+    }
+
+    /* .formcard > p{ */
+        /* font-size:.6em; */
+    /* } */
+}

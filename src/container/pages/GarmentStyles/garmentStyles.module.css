@@ -1,0 +1,16 @@
+
+.garmentHdr{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    /* text-align:center; */
+}
+
+.garmentHdr h1, .garmentHdr h4{
+
+    margin-top:10px;
+}
+
+.garmentHdr h4{
+    padding-top:10px;
+}

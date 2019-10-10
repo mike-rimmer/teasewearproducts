@@ -1,0 +1,46 @@
+/* oldnav.module.css */
+
+.nav{
+background-color:darkblue;
+color: white;
+padding-left: 20px;
+padding-top: 5px;
+}
+
+
+
+.nav ul{
+    display:flex;
+    flex-wrap: nowrap;
+    margin:0px;
+    border:0px;
+    padding:0px;
+    height:60px;
+}
+
+.nav li{
+    height:30px;
+    margin:0px;
+    color:yellow;
+}
+
+
+.logoplacement{
+    width:100%;
+    display:flex;
+    /* justify-content: space-around;     */
+}
+
+.nav img{
+    margin:0px;
+    display:inline-block;
+    height:75px;
+}
+
+.nav h2{
+    /* flex:50%; */
+    margin:0px;
+    display:inline-block;
+    /* font-size:3em; */
+
+} 

@@ -1,0 +1,37 @@
+/* info.module.css */
+*{box-sizing:border-box;}
+
+@media only screen and (min-width: 1025px){
+    html { font-size: 1em; }
+    h1 { font-size: 2.074em; }
+    h2 { font-size: 1.728em; }
+    h3 { font-size: 1.44em; }
+    h4 { font-size: 1.2em; }
+    small { font-size: 0.833em; }
+    .box { padding: 1.25em; }
+
+    
+
+
+ .infosheet h1, .infosheet h2, .infosheet h3, .infosheet h4, .infosheet p{
+     margin:0px;
+     margin-bottom:10px;
+    color:black;
+}
+
+/* .measure h1{
+    color:black
+}  */
+
+.measure{
+    flex:3;
+    padding:8px;
+}
+
+.measure img{
+    width:auto;
+    height:500px;
+}
+
+/* CSS for InfoPage */
+}

@@ -1,0 +1,39 @@
+/* about.module.css */
+
+   
+.wrapper{
+    position:relative;
+    top:100px;
+    display:flex;
+    width:100%;
+    max-width:1024px;
+    margin:0 auto;
+    align-items: center;
+    
+}
+.column{
+    width:50%;
+}
+
+.column h2{
+    text-align: center;
+}
+
+.column p{
+    text-align:left;
+}
+
+
+
+@media (max-width:864px){
+.wrapper{
+    flex-direction: column;
+    width:100%;
+}
+
+.column{
+    width:90%;
+    margin: 0 auto;
+}
+
+  }

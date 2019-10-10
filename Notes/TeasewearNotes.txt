@@ -1,0 +1,101 @@
+Hi Mike
+
+***************
+Access details
+
+ID is MikeR pw: Fletcher&Archer123
+
+ 
+
+So far o the website, I�ve:
+
+procured http://www.teasewearproducts.com
+Installed WordPress
+Installed the latest version of 2 plugins:
+Elementor � Element installer
+Ocean extra - Theme
+ 
+
+I am now searching for a WordPress Template that has a light version of ecommerce to allow for online ordering and pay through Pay Pal.
+
+ 
+
+I�m pretty sure Barb has enough information and photos for folks to choose what they want and a method to determine the sizes they require.
+
+ 
+
+The main pages now are HOME, ABOUT, SERVICES & CONTACT
+
+Once an ecommerce plugin is installed, I�ll create a PRODUCTS page
+
+
+Work in Progress to Design and Develop the Tease Wear WebSite
+Outline:
+
+Banner:
+Will contain company logo (Tease Wear) as well as menu items.
+
+Menu Items
+Will contain the following
+	Home
+	Products
+	About Us
+	Contact Us
+	Show Schedule
+	
+Home:
+	Contain a banner showing the full product line
+
+Product (list)
+Note:
+Suggestion 
+	1 Rationalize product size per https://www.pawsomedoggie.com/pages/size-chart. Also look at poodleit.com This will help to
+standardize your offerings. Use ideas from prior url to make product selection easier.	
+Whether to use an Ipad, or data phone for xactions??? 
+Materials available for choice will depend on products.
+Delivery time approx
+Shipping and Handling is additional
+Credit card reader price approx $91.00
+Square Reader $9.98 plus 2.65% rate per swipe for all major credit cards including American Express.
+Payment E-Transfer (Canada only), ?Paypal?, or Mastercard.
+	Hoodies
+	Coats
+		Grooming
+		Rain/Mud Protection
+		Cooling
+		Winter Coat
+			legging
+			no leggings with hood
+			leggings with hood
+	Belly Bands
+	Pee-Coat
+	Coat Flateners (body socks)
+	Diapers
+	Splash Pants
+	Leggings 
+	Winter Coat
+
+
+	
+	Need from Barb:
+		Tease Wear logo
+		Photos of products not already on Facebook
+	
+About Us:
+
+The motivation for starting Teasewear occured in 2013 when I discovered that my Gorden Setter, Tease, had become incontinent. Like many other owners faced with this problem I looked for "over the counter" solutions and found that doggy diapers where the only option available to me. Although solving the incontinence problem, the diapers themselves were a poor fit, too bulky in certain areas and too loose in other areas. Notwithstanding, aside from surgical intervention, and expensive veterinary bills there didn't seem to any other practical options for my dear Tease's problem. 
+After relating Tease's problem to my daughter, Dawn, and the poor choices available, Dawn thought for just a moment and then said: "Mom, why don't you just make a tailor panty with "absorbing pads/liners" (photo of Tease in panties should be included here).
+Hence the beginning of TeaseWear, inspired by my Gordon "Tease".  After designing and successfully trialing my new doggy apparel I was ready to register my new business in the fall of 2014.
+It wasn't too long before demand for Custom Doggy garments required me expanded my product line to include: Winter Coats, Rain Coats, Splash Pants, Belly Bands, Pee-coats and Hoodies.
+
+Contact Us:
+
+Tease Wear Products
+30 Tanner Drive
+Stirling, ON K0K-3E0
+P:(613)477-1113
+C:(613)919-0611
+
+email:teasewearproducts@gmail.com
+
+

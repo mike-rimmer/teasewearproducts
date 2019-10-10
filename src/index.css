@@ -1,13 +1,50 @@
 body {
   margin: 0;
+  padding:0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   color:#000000;
+   font-size:16px;
 }
 
+  /* Typography */
+    h1 { font-size: 2.074rem;}
+    h2 { font-size: 1.728rem; }
+    h3 { font-size: 1.44rem; }
+    h4 { font-size: 1.2rem; }
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'Roboto Condensed', sans-serif,Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+ }
+/* 
+****************   Styling for Nav Page  *********************
+************************************************************** */
+/* .container{
+  width:90%;
+  margin: 0 auto;
+  background-color:lavender;
+  padding:20px;
 }
+
+ul{
+  height: 100px;
+  display:flex;
+}
+
+li{
+margin: auto auto;
+list-style : none;
+}
+
+.Nav{
+  background-color: darkblue;
+  color:white;
+} */
+
+
+/* ****************   Styling for Nav Page  ********************* 
+************************************************************** */

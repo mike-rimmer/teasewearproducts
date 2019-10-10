@@ -1,0 +1,48 @@
+/* testimonial.module.css */
+
+
+    .testimonialContainer{
+        display:flex;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        justify-content: space-around;
+        color:white; 
+        }
+
+    .testimonialContainer h6{
+        /* font-size:1.3em; */
+        color:red;
+    }
+
+    .testimonial h5{
+     /* font-size:1.5em; */
+        
+    margin-bottom:20px;
+    text-align: center; 
+    color:black; 
+ 
+
+}
+
+
+@media only screen and (max-width:1024px){
+    .testimonial {
+        color:white;
+    }
+
+    /* .testimonial h5{ */
+        /* font-size:.5em; */
+    /* } */
+
+
+    .testimonialContainer{
+    justify-content: center;
+      
+    
+    }
+    
+
+
+
+
+}

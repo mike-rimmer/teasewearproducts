@@ -1,0 +1,31 @@
+magick wizard: wizard.jpg
+magick wizard.jpg win:
+
+crop use the inline cli index
+
+magick *.jpg -crop 120X120+10+5 thumbnail%03d.webp  Note This syntax loads and image and then crops it one at a time
+
+magick *.jpg [120X120+10+5] thumbnail%03d.webp Note This syntax loads all the images and then crops them
+
+
+resize
+magick '*.jpg' -resize 120x120 thumbnail%03d.png
+
+or
+magick logo: -resize '200%' bigWiz.png
+magick logo: -resize '200x50%' longShortWiz.png
+magick logo: -resize '100x200' notThinWiz.png
+magick logo: -resize '100x200^' biggerNotThinWiz.png
+magick logo: -resize '100x200!' dochThinWiz.png
+
+magick '*.jpg[120x120]' thumbnail%03d.png
+
+Using convert to change format
+magick convert *.jpg snood%d.webp
+
+Conclusions:
+There is some merit to optimising images for the web.  Since  devices range from 1 DPR (device pixel ratio) to 2 DPR it is important to consider how large the source file offered for display on a browser should be. This will allow the developer to minimise bandwidth consumption while at the same time offering the best possible for a given screen.
+
+Use <picture> for art direction ie showing a cropped photo or loading specific images types like jpg, webp, based on whether to device will support that type of image
+
+Use srcset for scaling images in order to preserve bandwidth and minimize load times.

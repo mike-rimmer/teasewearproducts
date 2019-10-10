@@ -1,0 +1,10 @@
+/* constructPage.module.css */
+.constructPage{
+    margin:0px;
+    height: 1000px; 
+    background-image: url( 'http://www.teasewearproducts.com/images/nohome/wipweb.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}

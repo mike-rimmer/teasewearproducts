@@ -1,0 +1,110 @@
+/* navMenu.module.css */
+
+.wrapper{
+  position:fixed;
+  top:0px;
+  width:100%;
+  
+  /* margin:0 auto; */
+  height:180px;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);  
+  display:flex;
+  /* justify-content: space-around;  */
+  align-items:center;
+  z-index:100;
+  /* font-family: 'Courgette', cursive; */
+  font-family: 'Rock Salt', cursive;
+  /* font-family: 'Della Respira', serif; */
+}
+
+
+
+.toggleButton{
+  left:10px;
+  
+}
+
+.wrapper img{
+  margin-left:40px;
+  width:auto;
+  height:100px;
+}
+
+.wrapper a{
+  color:white;
+  margin-left:40px;
+  /* font-size: 1em; */
+  text-decoration:none;
+}
+
+.wrapper a:hover, h1:hover{
+  color:red;  
+}
+
+.wrapper a:active{
+  color: yellow;
+}
+
+.wrapper ul{
+  display:flex; 
+  align-items:center;
+}
+
+
+
+.wrapper li{
+  list-style : none;
+}
+
+.dropDownMenu{
+  /* position:relative; */
+  top:60px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* min-width means apply contained css to screen size 769px and larger */
+/* @media only screen and (min-device-width : 1024px) */
+@media only screen and (min-width : 1024px)
+{ 
+  .toggleButton{
+    margin-left:10px;
+    display:none;
+  }
+  
+  .menuItems{
+    display:visible;
+  }
+}
+
+/* max-width means apply contained css to screen size 768px and smaller */
+/* @media(max-device-width: 768px){
+  .menuItems{
+    display:none ;
+  }
+  
+  .toggleButton{
+    margin-left:20px;
+  }
+
+  
+} */
+
+@media (max-width : 1024px) 
+{
+  .wrapper{
+    width:100%;
+  }
+
+  .wrapper ul{
+    display:none;
+  }
+
+  .wrapper a{
+    color:white;
+    margin-left:10px;
+    
+    text-decoration:none;
+  }
+
+} 

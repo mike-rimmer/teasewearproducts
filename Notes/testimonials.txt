@@ -1,0 +1,71 @@
+On Mon, Jun 3, 2019 at 7:29 PM Carole <carolewalker@shaw.ca> wrote:
+Hi Barb
+Here are the coats I have. Yours are better because they don't dry hard and last cooler longer !!
+��Is it possible to make each coat 1 inch longer ��because Ink is shorter backed than the dogs that will be getting them as prizes.
+Only my light  blue one is stretchy.
+Iits going to be a very small entry, so 6 coats please.
+The flame material has been liked by people who have seen it, so another like that an inch longer please.
+And then some for black girls and fawn boys ????
+Your choice, many like the shiny material.
+Thank you 
+
+Gabrielle MacDonald September 17, 2017
+
+Her cooling jackets are individually custom made and keep my dog cool for hours on end, even all afternoon at a dog show! Top that off with speedy professional service! Great company!
+
+Lynn F. Campbell Oct 28, 2017  
+This is my first time viewing this site. I am always interested in discovering new things. My animals are my life & am glad to know so many people that feel as I do.
+
+Brenda Potts October 24, 2017
+Got a diaper for a small dog, until she's spayed with Fixed Fur Life. Your diapers are adorable and so well made, thanks for making these available. They were recommended at Little Stinkers, and they have always given me excellent service. Highly recommended.
+
+Anna Sanford  August 15, 2017
+Amazing. Barb can literally make anything. See it - make it and superior 
+quality. Genius. Thank you for making my girls cooler, dryer, and cleaner!
+
+Sherry Waldron February 23, 2017 5 start
+I got the diaper and harness and I love it it's perfect for my girl.
+
+Heather Boyd April 10, 2015 5 Star
+Barb's products are awesome! Very high quality and adorable!
+
+Janet M Fenton December 15, 2017 5 Star
+
+Angel Clark September 19 2015 5 Star
+
+Brittany J Field May 9, 2015 5 Star
+
+<ul class="collection">
+    <li class="collection-item avatar">
+      <img src="images/yuna.jpg" alt="" class="circle">
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle">folder</i>
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle green">insert_chart</i>
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle red">play_arrow</i>
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+  </ul>
