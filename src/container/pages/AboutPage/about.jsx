@@ -1,18 +1,67 @@
 import React from 'react';
-import styles from './about.module.css';
+import styled from 'styled-components';
 import { PhotoCard } from '../../../components/components';
+
+const Wrapper = styled.div`
+	position:relative;
+	margin:0em;
+	padding:0em;
+    top:100px;
+	display:flex;
+	justify-content:space-between;
+    width:100%;
+    max-width:1024px;
+    margin:0 auto;
+	align-items: start;
+	h3{
+		text-align:center;
+	}
+
+	p{
+		text-align:left;
+	}
+
+	@media(max-width:1030px){
+		top:0em;
+        flex-direction:column;
+    }
+`
+
+const ColumnLeft = styled.div`
+	width:40%;
+	img{
+		width:90%;
+		max-width:500px;
+	};
+
+	@media(max-width:1030px){
+		top:0px;
+		width:100%;
+		padding:2em;
+    }
+	`
+const ColumnRight = styled.div`
+	width:40%;
+	@media(max-width:1030px){
+		width:100%;
+		padding:2em;
+    }
+`
+
+
+
 const About = (props) => {
-	console.log("In about", props)
+	// console.log("In about", props)
 	return (
-		<div className={styles.wrapper}>
-			<div className={styles.column}>
+		<Wrapper>
+			<ColumnLeft>
 				<PhotoCard
 					url='http://www.teasewearproducts.com/images/forapp/teasewear.jpg'
 					caption='The Girl who started it all!'
 				/>
-			</div>
-			<div className={styles.column}>
-				<h2>Humble Beginnings </h2>
+			</ColumnLeft>
+			<ColumnRight>
+				<h3>Humble Beginnings </h3>
 				<p>Tease Wear is named after our beloved dog, Tease.  It is a small home-based business that started in response to her medical needs. Over the years we have had the pleasure of making custom items for various animals. </p>
 				{/* <p>The motivation for starting Tease Wear occured in 2013 when I discovered that my Gorden Setter,
 					Tease, had become incontinent. Like many other owners faced with this problem I looked for "over
@@ -41,9 +90,9 @@ const About = (props) => {
 						...bringing TeaseWear Products to where we are today!
 					</p> */}
 					
-			</div>
+			</ColumnRight>
 		
-		 </div>
+		 </Wrapper>
 
 	);
 };

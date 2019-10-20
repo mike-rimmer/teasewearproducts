@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
-import Home from './container/pages/HomePage/home2';
+import Home from './container/pages/HomePage/home';
 import Contact from './container/pages/ContactPage/contact';
 import About from './container/pages/AboutPage/about';
-import Garment from './container/pages/GarmentPage/garmentPage2';
+// import Garment from './container/pages/GarmentPage/garmentPage';
 import NavMenu from './components/sideNavMenu/navMenu';
 import SideDrawer from './components/sideNavMenu/sideDrawer';
 import BackDrop from './components/sideNavMenu/backDrop';
 import InfoPage from './container/pages/InfoPage/infoPage';
 // import Test from './test'
 import { Route } from 'react-router-dom';
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+width:100%;
+max-width:1024px;
+margin:0 auto;
+`
 
 const TeaseApp = () => {
 	// Logic  to open and close Menu Side Drawer
@@ -31,10 +38,10 @@ const TeaseApp = () => {
 	}
 	// **** end of logic to open and close Menu Side Drawer
 	// const SHOWBALLOON = true;
-	const HIDEBALLOON = false;
+	// const HIDEBALLOON = false;
 	return (
 		// {/* Navigation Menu */}
-		<div className='navContainer'>
+		<Wrapper>
 			<NavMenu clickHandler={SideDrawerToggleClickHander} />
 			<SideDrawer show={sideDrawerOpen} />
 			{backDrop}
@@ -51,9 +58,10 @@ const TeaseApp = () => {
 			<Route     exact path='/' component={Home} />
 			<Route     path='/about' component={About} />
 			<Route     path='/contact' component={Contact} />
-
+{/* The following Code has been removed since this functionality is no longer required
+ */}
 			{/* Product regular and Show lists Grouped together */}
-			<Route
+			{/* <Route
 			     exact strict
 				path='/garment/regular' 
 				render={(props) => (
@@ -78,10 +86,9 @@ const TeaseApp = () => {
 					/>
 				)}
 			/>
-			
+			 */}
 			
 			<Route
-			
 				path={`/garment/show/pricing/:id`} 
 				render={(props) => (
 					<InfoPage {...props}/>
@@ -89,8 +96,6 @@ const TeaseApp = () => {
 			/>
 
 			<Route
-		
-		
 				path={`/garment/regular/pricing/:id`} 
 				render={(props) => (
 					<InfoPage {...props}/>
@@ -211,7 +216,7 @@ const TeaseApp = () => {
 				{...props}/>
 				)}
 			/>
-		</div>
+		</Wrapper>
 	);
 };
 export default TeaseApp;

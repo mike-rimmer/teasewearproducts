@@ -1,0 +1,14 @@
+teasewearproducts@gmail.com
+
+to log into HostGator Cpanel enter the following in the browser
+http:www.teasewearproducts.com/cpanel
+
+
+wait a few seconds and the address will default to port :2083
+
+If prompted enter the following:
+username:Bfowler
+pwd:9865548$Bf
+
+inquiries@teasewearproducts.com
+pwd:q23w4E!49

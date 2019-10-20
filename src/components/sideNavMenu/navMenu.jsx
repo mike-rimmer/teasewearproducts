@@ -3,60 +3,65 @@ import logo from '../../../src/logowhite.png';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import DrawerToggleButton from './drawerToggleButton';
-import {ShowWindowSize} from '../../components/components'
+
+
+
+	const Wrapper = styled.nav`
+	  position:fixed;
+	  Left: calc(-50vw + 50%);
+	  right: calc(-50vw + 50%);
+	  margin-left: auto;
+	  margin-right: auto;
+	  top:0px;
+	  /* transform:translateX(-50%); */
+	  height:90px;
+	  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);  
+	  display:flex;
+	  align-items:center;
+	  z-index:100;
+	  font-family: 'Rock Salt', cursive;
+	  img{
+		margin-left:40px;
+		  width:auto;
+		  height:50px;  
+	  };
+	
+	`
+	const ToggleButton = styled.div`
+		margin-left:20px;
+		visibility:hidden;
+		@media(max-width:590px){
+		  visibility:visible;
+		  }	
+	`
+	
+	const MenuItems = styled.div`
+	  display:visible;
+	  ul{
+		display:flex; 
+		  align-items:center;  
+	  }
+	
+	  li{
+		  list-style:none;
+	  }
+	
+	  a{
+		color:white;
+	  margin-left:40px;
+	  text-decoration:none;  
+	  }
+
+	  @media(max-width:590px){
+		  display:none;
+		  }
+	
+	  
+	`
 
 
 const navMenu = (props) => {
 
-const Wrapper = styled.nav`
-  position:fixed;
-  top:0px;
-  width:100%;
-  height:90px;
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);  
-  display:flex;
-  align-items:center;
-  z-index:100;
-  font-family: 'Rock Salt', cursive;
-  img{
-	margin-left:40px;
-  	width:auto;
-  	height:50px;  
-  };
-
-`
-const ToggleButton = styled.div`
-    margin-left:20px;
-    visibility:hidden
-	@media(max-width:590px){
-	  visibility:visible;
-	  }
-	
-`
-
-const MenuItems = styled.div`
-  display:visible;
-  ul{
-	display:flex; 
-  	align-items:center;  
-  }
-
-  li{
-	  list-style:none;
-  }
-
-  a{
-	color:white;
-  margin-left:40px;
-  
-  text-decoration:none;  
-  }
-  @media(max-width:590px){
-	  display:none;
-	  }
-
-  }
-`
 	return (
 		<header>
 			<Wrapper>
@@ -76,7 +81,8 @@ const MenuItems = styled.div`
 						<Link to='/contact' className=''>
 							<li>Contact</li>
 						</Link>
-						<ShowWindowSize/>
+						{/* Used for testing Responsive Design */}
+						{/* <DisplayWindowSize/> */}
 					</ul>
 				</MenuItems>
 			</Wrapper>

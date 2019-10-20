@@ -1,0 +1,12 @@
+export const size         = ['XXS','XS','S','M','L','XL','2XL','3XL','4XL']
+export const coolingcoats = [80,80,80,95,110,125,140,155,170]
+export const raincoats    = [60,60,60,75,90,105,120,135,150]
+export const warmingcoats = [60,60,60,75,90,105,120,135,150]
+export const wintercoats  = [80,80,80,95,110,125,140,155,170]
+export const splashpants  = [120,120,120,135,150,165,180,195,210]
+export const wintersuits  = [135,135,135,150,165,180,195,210,225]
+export const snoods       = [25,25,25,25,35,35,35,35,35]
+export const wintersnoods = [40,40,40,40,50,50,50,50,50]
+export const peewraps     = ['0','0','0','0',70,70,70,70,70]
+export const pyjama       = [80,80,80,95,110,125,140,155,170]
+

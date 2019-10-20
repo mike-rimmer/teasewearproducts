@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Modal from '../../../components/modal';
+import Modal from '../../../components/Modal/modal';
 import {
 	products,
 	cooling,
@@ -20,6 +20,8 @@ import {
 import { PhotoCard } from '../../../components/components';
 import ContructPage from '../ConstructPage/construct';
 import styles from './garmentPage2.module.css';
+import styled from 'styled-components'
+
 import { Link } from 'react-router-dom';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -28,6 +30,23 @@ import { Link } from 'react-router-dom';
 // props.garmentType
 // props.showModal
 // props.garmentTitle
+
+const Wrapper = styled.div`
+   position:relative;
+   top:100px;
+   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);	
+   width:auto;
+   text-align:center;
+   h1{
+    padding-top:20px;
+    padding-bottom:20px;
+    color:  #174568 ; 
+}
+.wrapper h1:hover{
+    color:  #174568 ; 
+}
+`
+
 
 const GarmentPage = ( props) => {
 	console.log("Garment Page Match", props.match)
@@ -171,13 +190,13 @@ const GarmentPage = ( props) => {
 	}
 		
 		return (
-			<div className={styles.wrapper}>
+			<Wrapper>
 				{/* <h1> Assorted Regular Garments </h1> */}
 				<h1>{props.garmentTitle}</h1>
 				{showModal ? <Modal onClick={modalClickHandler} product={testimonial} /> : ''}
 				<div className={styles.cardContainer}>{regGarmentList}
 				</div>
-			</div>
+			</Wrapper>
 		);
 	} else {
 		return <ContructPage />;

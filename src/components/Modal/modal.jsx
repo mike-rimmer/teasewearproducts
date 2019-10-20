@@ -1,5 +1,5 @@
 import React from 'react'
-import Testimonial from "../container/pages/Testimonial/testimonial"
+import Testimonial from "../../container/pages/Testimonial/testimonial"
 import styles from   './modal.module.css'
 const Modal = (props) => {	
 

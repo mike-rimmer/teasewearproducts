@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import styles from '../components/component.module.css';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
@@ -17,7 +17,7 @@ import {
 	peewraps,
 	snoods,
 	splashpants
-} from '../container/pages/GarmentPage/garmentData';
+} from '../container/pages/XremoveGarmentPage/garmentData';
 
 function getGarmentData (garmentType) {
 	let garmentdata;
@@ -86,7 +86,7 @@ function getGarmentData (garmentType) {
 }
 
 export const GarmentItem = (props) => {
-	console.log('In GarmentItem', props.name);
+	// console.log('In GarmentItem', props.name);
 	const [ caption ] = useState(props.caption);
 
 	const CaptionStyle = styled.span`
@@ -214,85 +214,15 @@ export const ReferralCard = (props) => {
 	);
 };
 
-export const SmallPhotos = (props) => {
-	const PhotoList = styled.div`
-	display:flex;
-	width:100%;
-	justify-content: space-around;
-	flex-wrap:wrap;
-`
-   const SmallPhoto = styled.div`
-      position:relative;
-    display:flex;
-    flex-direction: column;
-    margin:auto;
-    padding: 10;
-    margin-top:20px;
-    height:280px;
-    width:250px;
-    border-radius:10px;
-    text-align: center;
-	@media(max-width:1030px){
-		border:solid 1px red;
-	}
- `
 
- const SmallImage = styled.img`
-    border:solid 1px black;
-    height:200px;
-    width:200px;
-    border-radius:10px;
-    box-shadow: 7px 16px 16px rgba(12,12,12,.5);
-    margin:20px;
-	@media(max-width:1030px){
-		margin:0em;
-	}
- `
-	// console.log('In SmallPhotos Value of Props', props);
-	// let temp = props.data.map((ele) => `show/${ele.dir}`);
-	// console.log('Value of Temp', temp);
-
-	let noId = props.garmentStyle === 'Show' || props.garmentStyle === 'Regular' ? true : false;
-	let list;
-	// TODO:Check the logic for noId
-	if (noId) {
-		list = props.data.map((ele) => (
-			<SmallPhoto key={ele.id}>
-			{/* <div key={ele.id} className={styles.smallPhoto}> */}
-				{/* <img key={ele.id} className={styles.smallImage} src={ele.url} alt={ele.caption} /> */}
-				<SmallImage key={ele.id} scr = {ele.url} alt = {ele.caption}/>
-				<Link style={{ textDecoration: 'none' }} to={`${ele.dir}`}>
-					{' '}
-					{ele.caption}
-				</Link>
-			</SmallPhoto>
-		));
-	} else {
-		list = props.data.map((ele) => (
-			<SmallPhoto key={ele.id}>
-				<SmallImage key={ele.id} src={ele.url} alt={ele.caption} />
-				<Link style={{ textDecoration: 'none' }} to={`${ele.dir}/${ele.id}`}>
-					{' '}
-					{ele.caption}
-				</Link>
-			</SmallPhoto>
-		));
-	}
-
-	return (
-		<PhotoList>
-			{list}
-		</PhotoList>
-	);
-};
 
 export const NewLookPhotos = (props) => {
-	console.log('In NewLookPhotos Value of Props', props);
+	// console.log('In NewLookPhotos Value of Props', props);
 	const data = getGarmentData(props.data);
-	console.log('Garment Data is ', data);
+	// console.log('Garment Data is ', data);
 	let noId = props.garmentStyle === 'Show' || props.garmentStyle === 'Regular' ? true : false;
 	let list;
-	console.log('NoID', noId);
+	// console.log('NoID', noId);
 	if (noId) {
 		list = data.map((ele) => (
 			<div key={ele.id} className={styles.newlookPhotos}>
@@ -322,57 +252,7 @@ export const NewLookPhotos = (props) => {
 		</div>
 	);
 };
-export const SizeButton = () => {
-	const Wrapper = styled.div`
-	margin:0em;
-	`
-	// TODO: Make this into a basic with no return
-	return (
-		<Wrapper>
-			<input type='radio' name='size' value='s' />
-			<label>S</label>
-			<input type='radio' name='size' value='m' />
-			<label>M</label>
-			<input type='radio' name='size' value='l' />
-			<label>L</label>
-			<input type='radio' name='size' value='Xl' />
-			<label>Xl</label>
-			<input type='radio' name='size' value='2X' />
-			<label>2X</label>
-			<input type='radio' name='size' value='3X' />
-			<label>3X</label>
-		</Wrapper>
-	);
-};
 
 
 
-export const ShowWindowSize = (props) => {
-	const [ width, setWidth ] = useState();
-	const [ height, setHeight ] = useState();
 
-	const updateWindowsDimensions = () => {
-		setWidth(window.innerWidth);
-		setHeight(window.innerHeight);
-	};
-
-	useEffect(() => {
-		window.addEventListener('resize', updateWindowsDimensions);
-		return () => {
-			window.removeEventListener('resize', updateWindowsDimensions);
-		};
-	});
-
-	const style = {
-		marginLeft: '40px',
-		color: 'pink',
-		zindex: 0
-	};
-
-	return (
-		<div>
-			<p style={style}>Height: {height} </p>
-			<p style={style}>Width: {width} </p>
-		</div>
-	);
-};

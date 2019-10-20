@@ -1,6 +1,5 @@
 import React from 'react';
 import { ContactCard } from '../../../components/components';
-// import ContactForm from '../../../components/contactform';
 import ContactForm from '../../../components/Form/form'
 import styled from 'styled-components'
 

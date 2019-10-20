@@ -1,17 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import  './sideDrawer.css';
 import styled from 'styled-components'
 
-const sideDrawer = (props) => {
-	let DrawerStatus = '';
-	if (props.show) {
-		DrawerStatus = 'DrawerOpen';
-	}
-
-	
-	
-	const SideDrawer = styled.div`
+const SideDrawer = styled.div`
     height:25%;
     background-image: linear-gradient(to top, #09203f 0%, #537895 100%); box-shadow: 2px 0 5px rgba(0,0,0, 1);
     position:fixed;
@@ -22,8 +13,8 @@ const sideDrawer = (props) => {
     z-index:105;
     padding-left:1em;
     font-family: 'Rock Salt', cursive;
-	transform : translateX(-110%);
-	transition: transform 0.5s ease-out;
+	transform: ${props => props.open ? 'translateX(0)' : 'translateX(-110%)'};  
+    transition: transform .60s ease-out;
 
 	@media(min-width:1030px){
 		${'' /* display:none;	 */}
@@ -42,9 +33,17 @@ const MenuItems = styled.ul`
     text-decoration: none;
 }
 `
+const sideDrawer = (props) => {
+	let DrawerOpen = false;
+	if (props.show) {
+		DrawerOpen = true;
+	}
+
+		
+	
 
 	return (
-		<SideDrawer className = {DrawerStatus} >
+		<SideDrawer open = {DrawerOpen}>
 		<MenuItems >
 			{/* <h1>Menu Items</h1> */}
 				<Link to='/' className='sideNav'>

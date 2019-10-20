@@ -1,4 +1,4 @@
-export const garments=[
+export const inventoryTypes=[
 	'All',
 	'Cooling Coats',
 	'Diapers',
@@ -16,7 +16,7 @@ export const garments=[
 ]
 
 
-export const dataList = [
+export const allInventoryItems = [
 {
     id: 1,
     url: 'http://www.teasewearproducts.com/images/raincoat/raincoatw1.jpg',
@@ -135,7 +135,8 @@ export const dataList = [
     desc:
     "Who needs ice-cream when there's a cooling coat! The inner layer of the coat absorbs and holds water to keep the body cool and comfortable while the outer layer prevents water from wetting floors and furniture. Keeps pet cool and comfortable in summer heat. The inner layer keeps the coat dry. The outer layer can be flamboyant or subtle.",
     material:'Outer shell is a waterproof breathable material available in a             print or a solid. Inner Lining is the cooling portion made of a            woven material that holds 10 times it weight in water but unlike           chamios remain solf and pliant when dry',
-    style:'Tease:  "Cape style" attaches at neck with velcro. Cape is held in         place with under belly strap attached with velcro to the other side'
+    style:'Tease:  "Cape style" attaches at neck with velcro. Cape is held in         place with under belly strap attached with velcro to the other side',
+    sizeguide:[]
 },
 {
     id: 15,
