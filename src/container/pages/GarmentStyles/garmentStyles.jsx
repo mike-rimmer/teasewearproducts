@@ -1,5 +1,5 @@
 import React from 'react';
-import SmallPhotos from '../../../components/smallphotos';
+import GarmentPhotos from '../../../components/garmentphotos';
 // import styles from './garmentStyles.module.css';
 import styled from 'styled-components'
 
@@ -12,10 +12,9 @@ function GarmentStyles ({ data }) {
 	return (
 		<Wrapper>
 			<GarmentHdr>
-				<h3>Garment/s  </h3>
-				<h3>({qty}) Styles</h3>
+				<h3>Garment Styles ({qty})</h3>
 			</GarmentHdr>
-			<SmallPhotos data={data} />
+			<GarmentPhotos data={data} />
 		</Wrapper>
 	);
 }
@@ -37,6 +36,7 @@ const GarmentHdr = styled.div`
 	
 	padding-top:1em;
 	h3,h4{
+		font-size:1.2em;
 		margin:0em;
 		padding:0em;
 	}

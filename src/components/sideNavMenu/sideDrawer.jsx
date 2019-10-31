@@ -2,6 +2,36 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components'
 
+
+const sideDrawer = (props) => {
+	let DrawerOpen = false;
+	if (props.show) {
+		DrawerOpen = true;
+	}
+
+		
+	
+
+	return (
+		<SideDrawer open = {DrawerOpen}>
+		<MenuItems >
+			{/* <h1>Menu Items</h1> */}
+				<Link to='/' className='sideNav'>
+					<li>Home</li>
+				</Link>
+				<Link to='/about'className='sideNav'>
+					<li>About</li>
+				</Link>
+				<Link to='/contact'className='sideNav'>
+					<li>Contact</li>
+				</Link>
+			</MenuItems>
+		</SideDrawer>
+	);
+};
+
+export default sideDrawer;
+
 const SideDrawer = styled.div`
     height:25%;
     background-image: linear-gradient(to top, #09203f 0%, #537895 100%); box-shadow: 2px 0 5px rgba(0,0,0, 1);
@@ -33,31 +63,3 @@ const MenuItems = styled.ul`
     text-decoration: none;
 }
 `
-const sideDrawer = (props) => {
-	let DrawerOpen = false;
-	if (props.show) {
-		DrawerOpen = true;
-	}
-
-		
-	
-
-	return (
-		<SideDrawer open = {DrawerOpen}>
-		<MenuItems >
-			{/* <h1>Menu Items</h1> */}
-				<Link to='/' className='sideNav'>
-					<li>Home</li>
-				</Link>
-				<Link to='/about'className='sideNav'>
-					<li>About</li>
-				</Link>
-				<Link to='/contact'className='sideNav'>
-					<li>Contact</li>
-				</Link>
-			</MenuItems>
-		</SideDrawer>
-	);
-};
-
-export default sideDrawer;

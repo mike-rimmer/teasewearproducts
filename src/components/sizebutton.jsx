@@ -6,12 +6,11 @@ const {useState} =React
 
 const SizeButton = (props) => {
 	// TODO: Make this into a basic with no return
-
 	return (
 		<BtnWrapper>
-		<Item>
+		{/* <Item>
 		<h4>Size:</h4>
-		</Item>
+		</Item> */}
 		<Item>
 			<RadioButton 
 			type='radio' 
@@ -108,17 +107,27 @@ const SizeButton = (props) => {
 };
 
 const BtnWrapper = styled.div`
-  display:flex;
-  height: auto;
-  width: 100%;
-  padding: .5em .5em .5em 0em;
-  box-sizing: border-box;
+ display:flex;
+ font-size:10px;
+ flex-wrap:wrap;
+ width:90%;
+ /* background-color:white; */
+ margin:auto;
+ margin-bottom:1em;
+ /* border:1px solid black; */
+ /* @media(max-width:1030){
+	display:flex;
+	height: auto;
+	width: 100%;
+	padding: .5em .5em .5em 0em;
+	box-sizing: border-box;
+}
   @media(max-width:880px){
 	  font-size:12px;
   }
   @media(max-width:680px){
 	  font-size:9px;
-	  flex-wrap:wrap;
+	  flex-wrap:wrap; */
 
   }
   `;
@@ -126,43 +135,45 @@ const BtnWrapper = styled.div`
   const Item = styled.div`
 	display: flex;
 	width:auto;
-	min-width:5em;
+	min-width:6em;
 	position: relative;
-    /* border: solid 1px black; */
+
 	align-items: center;
-	height: 40px;
-	@media(max-width:530px){
+	height: 4em;
+	font-weight:bold;
+	/* @media(max-width:530px){
 		:nth-child(7){
 			margin-left:6em;
 		}
-	}
+	} */
   `;
 
 const RBLabel = styled.label`
   position: absolute;
-  top: 30%;
-  left: 2.25em;
+  top: 40%;
+  left:60%;
+  /* left: 2.25em; */
   max-width:2em;
   height: 2em;
-  @media(max-width:880px){
+  /* @media(max-width:880px){
 	  font-size:12px;
   }
   @media(max-width:680px){
 	  font-size:10px;
-  }
+  } */
   `
 
 const RadioButton =  styled.input`
 width:2em;
 height:2em;
-@media(max-width:880px){
+${'' /* @media(max-width:880px){
 	  font-size:12px;
   }
   @media(max-width:680px){
 	  font-size:10px;
 	  width:1.5em;
       height:1.5em;
-  }
+  } */}
 `
 
 export default SizeButton;

@@ -6,16 +6,12 @@ import About from './container/pages/AboutPage/about';
 import NavMenu from './components/sideNavMenu/navMenu';
 import SideDrawer from './components/sideNavMenu/sideDrawer';
 import BackDrop from './components/sideNavMenu/backDrop';
-import InfoPage from './container/pages/InfoPage/infoPage';
+import OrderPage from './container/pages/OrderPage/orderpage';
 // import Test from './test'
 import { Route } from 'react-router-dom';
-import styled from 'styled-components'
 
-const Wrapper = styled.div`
-width:100%;
-max-width:1024px;
-margin:0 auto;
-`
+
+
 
 const TeaseApp = () => {
 	// Logic  to open and close Menu Side Drawer
@@ -41,7 +37,7 @@ const TeaseApp = () => {
 	// const HIDEBALLOON = false;
 	return (
 		// {/* Navigation Menu */}
-		<Wrapper>
+		<div>
 			<NavMenu clickHandler={SideDrawerToggleClickHander} />
 			<SideDrawer show={sideDrawerOpen} />
 			{backDrop}
@@ -54,12 +50,12 @@ const TeaseApp = () => {
 						so path = '/' would translate to "localhost/"
 						and path = '/about' would translate to "localhost/about"
 					and so on.*/}
-
-			<Route     exact path='/' component={Home} />
-			<Route     path='/about' component={About} />
-			<Route     path='/contact' component={Contact} />
-{/* The following Code has been removed since this functionality is no longer required
- */}
+ 
+			<Route exact path='/' component={Home} />
+			<Route path='/about' component={About} />
+			<Route path='/contact' component={Contact} /> 
+			{/* The following Code has been removed since this functionality is no longer required
+ 			*/}
 			{/* Product regular and Show lists Grouped together */}
 			{/* <Route
 			     exact strict
@@ -87,136 +83,81 @@ const TeaseApp = () => {
 				)}
 			/>
 			 */}
-			
-			<Route
-				path={`/garment/show/pricing/:id`} 
-				render={(props) => (
-					<InfoPage {...props}/>
-				)}
-			/>
 
-			<Route
-				path={`/garment/regular/pricing/:id`} 
-				render={(props) => (
-					<InfoPage {...props}/>
-				)}
-			/>
+			<Route path={`/garment/show/pricing/:id`} render={(props) => <OrderPage {...props} />} />
 
-		
+			<Route path={`/garment/regular/pricing/:id`} render={(props) => <OrderPage {...props} />} />
 
 			<Route
 				path='/garment/regular/raincoats'
-				render={(props) => (
-					<InfoPage
-						garmentType='Rain Coats'
-						{...props}
-					/>
-				)}
+				render={(props) => <OrderPage garmentType='Rain Coats' {...props} />}
 			/>
 			<Route
-			    // exact strict
+				// exact strict
 				path={`/garment/regular/coolingcoats`}
-				render={(props) => (
-				<InfoPage
-				garmentType='Cooling Coats'
-				{...props}
-				/>
-				)}
+				render={(props) => <OrderPage garmentType='Cooling Coats' {...props} />}
 			/>
 
 			<Route
 				path='/garment/show/wintercoats'
-				render={(props) => (
-					<InfoPage
-						garmentType='Winter Coats'
-						{...props}
-					/>
-				)}
+				render={(props) => <OrderPage garmentType='Winter Coats' {...props} />}
 			/>
 
 			<Route
-			    // exact strict
+				// exact strict
 				path='/garment/regular/splashpants'
-				render={(props) => (
-				<InfoPage garmentType='Splash Pants'
-				{...props}/>
-				)}
+				render={(props) => <OrderPage garmentType='Splash Pants' {...props} />}
 			/>
 
 			<Route
-			    // exact strict
+				// exact strict
 				path='/garment/regular/diapers'
-				render={(props) => (
-				<InfoPage garmentType='Diapers'
-				{...props}/>
-				)}
+				render={(props) => <OrderPage garmentType='Diapers' {...props} />}
 			/>
 
 			<Route
-			    // exact strict
+				// exact strict
 				path='/garment/regular/bellybands'
-				render={(props) => (
-				<InfoPage garmentType='Belly Bands'
-				{...props}/>
-				)}
+				render={(props) => <OrderPage garmentType='Belly Bands' {...props} />}
 			/>
 			<Route
-			    // exact strict
+				// exact strict
 				path='/garment/regular/hats'
-				render={(props) => (
-				<InfoPage garmentType='Hats'
-				{...props}/>
-				)}
+				render={(props) => <OrderPage garmentType='Hats' {...props} />}
 			/>
 			<Route
-			    // exact strict
+				// exact strict
 				path='/garment/show/bibs'
-				render={(props) => (
-				<InfoPage garmentType='Bibs'
-				{...props}/>
-				)}
+				render={(props) => <OrderPage garmentType='Bibs' {...props} />}
 			/>
 			<Route
-			    // exact strict
+				// exact strict
 				path='/garment/show/bodysocks'
-				render={(props) => (
-				<InfoPage garmentType='Body Socks'
-				{...props}/>
-				)}
+				render={(props) => <OrderPage garmentType='Body Socks' {...props} />}
 			/>
 			<Route
-			    // exact strict
+				// exact strict
 				path='/garment/show/pyjamas'
-				render={(props) => (
-				<InfoPage garmentType='P J'
-				{...props}/>
-				)}
+				render={(props) => <OrderPage garmentType='P J' {...props} />}
 			/>
 			<Route
-			    // exact strict
+				// exact strict
 				path='/garment/show/peewraps'
-				render={(props) => (
-				<InfoPage garmentType='Pee Wraps'
-				{...props}/>
-				)}
+				render={(props) => <OrderPage garmentType='Pee Wraps' {...props} />}
 			/>
 			<Route
-			    // exact strict
+				// exact strict
 				path='/garment/show/snoods'
-				render={(props) => (
-				<InfoPage garmentType='Snoods'
-				{...props}/>
-				)}
+				render={(props) => <OrderPage garmentType='Snoods' {...props} />}
 			/>
 			<Route
-			    // exact strict
+				// exact strict
 				path='/garment/show/warmingcoats'
-				render={(props) => (
-				<InfoPage garmentType='Warming Coat'
-				{...props}/>
-				)}
+				render={(props) => <OrderPage garmentType='Warming Coat' {...props} />}
 			/>
-		</Wrapper>
+		</div>
 	);
 };
 export default TeaseApp;
+
+

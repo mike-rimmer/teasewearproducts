@@ -1,5 +1,5 @@
 export const inventoryTypes=[
-	'All',
+    // Removed "All"
 	'Cooling Coats',
 	'Diapers',
 	'Belly Bands',

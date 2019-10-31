@@ -4,11 +4,11 @@ import React from 'react';
 // import styles from './info.module.css';
 import styled from 'styled-components';
 import { allInventoryItems } from './inventoryDataList';
-import OrderSheet from '../../../components/OrderSheet/ordersheet';
-import GarmentStyles from '../../../container/pages/GarmentStyles/garmentStyles';
+import OrderDetails from '../../../components/orderdetail'
+import GarmentStyles from '../GarmentStyles/garmentStyles';
 
 function OrderPage (props) {
-	let InfoData;
+	let OrderData;
 	let tempData;
 	let garmentStyles;
 	let persistGarment;
@@ -19,106 +19,106 @@ function OrderPage (props) {
 		persistGarment = tempData.caption;
 		garmentStyles = allInventoryItems.filter((ele) => ele.caption === persistGarment && ele.id > 13);
 		// console.log("InfoData props match id TempData", tempData);
-		InfoData = <OrderSheet id={props.match.params.id} data={allInventoryItems} />;
+		OrderData = <OrderDetails id={props.match.params.id} data={allInventoryItems} />;
 		garmentStyles = <GarmentStyles data={garmentStyles} />;
 	} else {
 		// This is where we show the garments filtered by type as well as display the relevent garment data
 		tempData = allInventoryItems.filter((ele) => ele.caption === props.garmentType && ele.id > 13);
 		// console.log("InfoData props do not match id TempData", tempData);
-		InfoData = <OrderSheet />;
+		OrderData = <OrderDetails data={props.garmentType}/>;
 		garmentStyles = <GarmentStyles data={tempData} />;
 	}
 	// console.log('Info Page Data', tempData);
 	return (
-		<Wrapper>
+		<OrderWrapper>
 			<OrderSection>
-				<InfoSection>{InfoData}</InfoSection>
+				<InfoSection>{OrderData}</InfoSection>
 				<GarmentSection>{garmentStyles}</GarmentSection>
 			</OrderSection>
-			{/* <MeasureSection>
+			{/* <button><h4>Add to Cart</h4></button> */}
+			<MeasureSection>
 				<img src='http://www.teasewearproducts.com/images/forapp/measurediag.jpg' alt='measure diag'/>
 			</MeasureSection>
-			<button><h4>Add to Cart</h4></button> */}
-		</Wrapper>
+		</OrderWrapper>
 	);
 }
 
-const Wrapper = styled.section`
+const OrderWrapper = styled.section`
+	display:grid;
+	grid-template-columns:1fr;
+	/* grid-template-rows : minmax(400px,50vh) minmax(600px,50vh);  */
+	grid-template-rows : auto, 1fr;  
+	grid-template-areas:
+	'measure'
+	'ordersec';
 	color: black;
-	padding-top: 2em;
 
-	@media (max-width: 1030px) {
+	
+	/* @media (min-width: 1030px) {
+		grid-template-columns:1fr 1fr;
+		grid-template-rows: auto minmax(400px,50%);
+		grid-template-areas:
+		'ordersec ordersec'
+		'measure measure';
 		width: 100%;
 		flex-direction: column;
 		height: auto;
 		padding: 0px;
-	}
+	} */
 `;
 
 const OrderSection = styled.section`
-	display: flex;
-	flex-direction: column;
+    grid-area : ordersec;
+	display: grid;
+	grid-template-columns:1fr;
+	grid-template-rows: minmax(400px, 50vh) minmax(550px, 50vh);
+	grid-template-areas:
+	'info'
+	'garments';
+
 `;
+
 const InfoSection = styled.section`
-	margin: 0em;
-	padding: 2em;
-	width: 100%;
-	height: 500px;
+	grid-area:info;
+	margin-top:2em;
+	padding: .5em;
 	background: rgb(176, 197, 204);
 	text-align: left;
-	h1,
-	h2,
-	h3,
-	h4,
-	p {
-		padding: 0em;
-		margin: 0em;
-		padding-top: .5em;
-		margin-left: .5em;
-		text-align: left;
+	h3{
+		font-size:.9em;
+		margin:0 0 .4em 0;
 	}
-	@media (max-width: 1030px) {
+	h4{
+		font-size:1em;
+	  	margin:0 0 .5em 0;
+		  
+	}
+	p {
+		text-align: left;
+		font-size:.8em; 
+		margin:0 0 .5em 0;
+	}
+	@media (min-width: 1030px) {
 		width: 100%;
 		height: auto;
 		border-radius: 0;
+	
 	}
 `;
 
 const GarmentSection = styled.section`
-	margin: 0em;
-	padding: 0em;
-	height: 370px;
-	max-width: 1024px;
+    grid-area:garments;
 	overflow-x: scroll;
-	/* background:lightpink; */
-	@media (max-width: 1030px) {
-		flex-direction: row;
-		width: 100%;
-		height: 300px;
-		flex-wrap: wrap;
-	}
+
 `;
 
 const MeasureSection = styled.section`
-	width: 30%;
-	padding-top: 1em;
-	text-align: center;
-	height: auto;
-	h3 {
-		margin: 0px;
+    img{
+		width:100%;
+		object-fit:contain;
 	}
 
-	img {
-		width: 400px;
-		object-fit: fit;
-	}
 
-	@media (max-width: 1030px) {
-		width: 100%;
-		img {
-			width: 375px;
-			object-fit: contain;
-		}
-	}
+
 `;
 export default OrderPage;
