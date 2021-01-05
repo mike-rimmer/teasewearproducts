@@ -1,7 +1,8 @@
 /* Index.css */
 
-*{box-sizing:border-box;}
-html{
+*{box-sizing:border-box;
+  padding:0px;
+  margin:0px;
   font-size:16px;
 }
 

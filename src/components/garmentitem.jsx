@@ -16,7 +16,7 @@ const MenuItem = (props) => {
 
 const Item = styled.div`
 display:flex;
-width:100%;
+/* width:100%; */
 padding-bottom:.5em;
 padding-left:.5em;
 
@@ -43,20 +43,15 @@ padding-left:.5em;
 `;
 
 const CaptionStyle = styled.span`
-    width:70%;
-    text-align:left;
+  
+    /* text-align:left; */
     padding-left:1em;
 	`;
 
     const QtyStyle = styled.span`
-    width:30%;
-    text-align:right;
-    padding-right:1em;
+    margin-left: auto;
+    padding-right:2em;
 	`;
-
-   
-
-
 
 
 export default MenuItem

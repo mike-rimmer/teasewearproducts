@@ -83,21 +83,21 @@ function Inventory (props) {
 	const [hide, setHide] = useState(false)
 	function clickHandler (caption, active, e) {
 		setData(caption);
-		caption !== 'All' ? setHide(!hide) :
+		// caption !== 'All' ? setHide(!hide) :
 		// e.target.className+="active"
-		console.log(e.target)
+		// console.log(e.target)
 		setActive(!active)
 	}
 
-	const menuItems = inventoryTypes.map((ele) => {
+	const inventoryItems = inventoryTypes.map((ele) => {
 		return <GarmentMenuItem key={ele} name={ele} caption={ele} qty={calcQty(ele)} onClick={clickHandler} active = {active}/>;
 	});
-
+	
 	return (
 		<InventorySection >
 			<InventoryMenu>
-				{/* <h4>Garment Selection and Styles</h4> */}
-				<ShowInventoryMenu display={!hide} >{menuItems}</ShowInventoryMenu> 
+				<h4>Garment Selection and Styles</h4>
+				<ShowInventoryMenu display={!hide} >{inventoryItems}</ShowInventoryMenu> 
 			</InventoryMenu>
 			<InventoryPhotos>
 				<NewLookPhotos data={data} garmentStyle={data === 'All' ? 'Show' : ''} onclick={clickHandler} />
@@ -107,69 +107,78 @@ function Inventory (props) {
 }
 
 const InventorySection = styled.section`
-	display:grid;
-	width:100%;
-	grid-template-columns: minmax(400px, 100vw);
-	grid-template-rows: minmax(400px, 600px) minmax(400px, 600px);
+	display: grid;
+	grid-template-columns: 1fr ;
 	grid-template-areas:
 	'menu'
 	'photo'; 
-	
+	width:100%;
+	height:auto;
+	/* justify-content:space-between; */
+	@media(min-width:1030px){
+	margin-top:3em;
+	grid-template-columns: 1fr  1fr;
+	grid-template-rows: 450px;
+	overflow-y:hidden;
+	grid-gap:10em;
+	grid-template-areas:
+	'menu   photo ',
+	}
 `;
+
 const InventoryMenu = styled.section`
-    grid-area: menu;
-    width:100%;
+grid-area:menu;
+background-color:#bbb;
+height:auto;
+overflow-y:scroll;
     h4{
 		font-size:1em;
+		padding-top:1em;
 		padding-left:.5em;
+		text-align:center;
 	}
-	/* @media(min-width:1030px){
-		width:50%;
-	} */
+	flex: 1, 1, 100%;
+	@media(min-width:1030px){
+		margin-left:8em;
+	}
 	`;
 
 const ShowInventoryMenu = styled.section`
-	 display: ${props => props.display ? 'display': 'none'};
-	  background-color:yellow;
+	 display: ${props => props.display ? 'display': 'none'};	
 `;
 
 const InventoryPhotos = styled.section`
-	grid-area:photo;
-	width:400px;
-	height:550px;
-	overflow-y:scroll;
-    /* display:flex; */
-	width:100%;
-	background-color:lightgray;
-	/* flex-direction:row; */
-	/* overflow-y:scroll;
-	height:auto;
-	max-height:370px;
+grid-area:'photo';
+display:flex;
+margin-left: calc(50% - 25%);
+	justify-content:center;
 	text-align:center;
-	padding-top:.5em;
-	margin-bottom:1em; */
-	/* &img{
-		margin:1em;
-		width:250px;
-		margin:0 auto;
-		object-fit:scale-down;
-		/* max-height:200px; */
+	background-color:lightblue;
+	width:400px;
+	height:460px;
+	margin-bottom:5em;
+	overflow-x:scroll;
+	scroll-snap-type: x mandatory;
+    img{
+		scroll-snap-align:center;
+		max-width:100%;
+		height:auto;
 
-
-	/* @media(min-width:1030px){
-		width:50%;
-		height:350px;
-		margin-left:15em;
-		margin-right:15em;
-		flex-direction:column;
-		flex-wrap:wrap;
-		overflow-y:scroll;
-		align-items:center;
-	   /* max-height:40px; */
-	   /* background-color:red;
-	   
-
-	
-	} */ 
+	}
+@media(min-width:1030px){
+	display:flex;
+	justify-content:center;
+	text-align:center;
+	background-color:lightblue;
+	width:400px;
+	height:460px;
+	margin-bottom:5em;
+	overflow-x:scroll;
+	scroll-snap-type: x mandatory;
+	img{
+		scroll-snap-align:center;
+	    
+	}
+	}
 `
 export default Inventory;

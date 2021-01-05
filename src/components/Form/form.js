@@ -16,8 +16,12 @@ background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 box-shadow: 7px 16px 16px rgba(12,12,12,.5);
 border-radius: 1em;
 padding:1em;
-@media(max-width:1030px){
-    width:100%;
+margin-bottom: 3em;
+
+@media(min-width:1030px){
+	padding:1em;
+	margin-top:0em;
+	margin-bottom: 3em;
 }
 `
 

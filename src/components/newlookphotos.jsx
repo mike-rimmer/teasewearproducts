@@ -34,31 +34,33 @@ const NewLookPhotos = (props) => {
 		images = data.map((ele) => (
 			<ImageWithCaption key={ele.id} >
 				<img src={ele.url} alt={ele.caption} onClick = {props.onclick}/>
-				<Link style={{ textDecoration: 'none' }} to={`${ele.dir}`}>
+				<CaptionLink style={{ textDecoration: 'none' }} to={`${ele.dir}`}>
 					{' '}
 					{ele.caption} Price ${ele.price}{' '}
-				</Link>
+				</CaptionLink>
 			</ImageWithCaption>
 		));
 	} else {
 		images = data.map((ele) => (
-			<ImageWithCaption key={ele.id} >
-				< img key={ele.id}  src={ele.url} alt={ele.caption}
-				 />
-				<Link style={{ textDecoration: 'none' }} to={`${ele.dir}/${ele.id}`}>
+			<React.Fragment>
+				< img key={ele.id}  src={ele.url} alt={ele.caption} />
+				<CaptionLink  to={`${ele.dir}/${ele.id}`}>
 					{' '}
 					{ele.caption} Item#: {ele.id}
-				</Link>
-			</ImageWithCaption>
+				</CaptionLink>
+			</React.Fragment>
+		
 		));
 	}
 
 	return (
 		// <div className={styles.photoList}>
-		<ImageContainer>
+		// <ImageContainer>
+		<React.Fragment>
 			{images}
-			{/* <h1>Testing </h1> */}
-		</ImageContainer>
+		</React.Fragment>
+		
+		// </ImageContainer>
 	);
 };
 
@@ -128,13 +130,19 @@ function getGarmentData (garmentType) {
 	return garmentdata;
 }
  
-const ImageWithCaption = styled.div`
-  width:100%;
-  border:1px solid white;
+const ImageContainer = styled.div`
+/* display:flex; 
+overflow-x:auto;
+width:90vw;
+margin:0 auto; */
 
 `
-const ImageContainer = styled.div`
-  /* display:flex; */
+
+const ImageWithCaption = styled.div`
+
+`
+const CaptionLink =  styled(Link)`
+  color:darkblue;
 `
 
 export default NewLookPhotos

@@ -8,26 +8,27 @@ const navMenu = (props) => {
 	return (
 		<header>
 			<Wrapper>
-				<ToggleButton>
+				<div className ='ToggleButton'>
 					<DrawerToggleButton click={props.clickHandler} />
-				</ToggleButton>
+				</div>
+				<Link to='/'>
 				<img src={logo} alt='TeaseWear Logo' />
-				<Link to='/'>{/* <h1>TeaseWear</h1> */}</Link>{' '}
-				<MenuItems>
+				</Link>{`TeaseWear`}
+				<div className = 'MenuItems'>
 					<ul className=''>
-						<Link to='/' className=''>
-							<li>Home</li>
-						</Link>
-						<Link to='/about' className=''>
-							<li>About</li>
-						</Link>
-						<Link to='/contact' className=''>
-							<li>Contact</li>
-						</Link>
+						<TeaseLink to='/' className=''>
+							Home
+						</TeaseLink>
+						<TeaseLink to='/about' className=''>
+							About
+						</TeaseLink>
+						<TeaseLink to='/contact' className=''>
+							Contact
+						</TeaseLink>
 						{/* Used for testing Responsive Design */}
 						{/* <DisplayWindowSize/> */}
 					</ul>
-				</MenuItems>
+				</div>
 			</Wrapper>
 		</header>
 	);
@@ -36,54 +37,71 @@ const navMenu = (props) => {
 export default navMenu;
 
 const Wrapper = styled.nav`
-	  position:fixed;
-	  Left: calc(-50vw + 50%);
-	  right: calc(-50vw + 50%);
-	  margin-left: auto;
-	  margin-right: auto;
+      /* position:fixed;
+	  left: calc(50% - 50%);
+	  right:calc(50% - 50%);
 	  top:0px;
-	  /* transform:translateX(-50%); */
-	  height:90px;
+	  height:90px; */
+	  width:100%;
 	  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 	  display:flex;
 	  align-items:center;
 	  z-index:100;
 	  font-family: 'Rock Salt', cursive;
 	  img{
-		margin-left:40px;
-		  width:auto;
-		  height:50px;  
+		  margin-left:2em;
+		  margin-right:2em;
+		  width:4em;
+		  height:4em;  
 	  };
-	
-	`
-	const ToggleButton = styled.div`
+	  color:white;
+
+	  @media(min-width:1030px){
+		left: calc(50% - 46%);
+		right:calc(50% - 46%);
+	  }
+	.ToggleButton{
 		margin-left:20px;
 		visibility:hidden;
 		@media(max-width:590px){
 		  visibility:visible;
 		  }	
-	`
+	}
 	
-	const MenuItems = styled.div`
+	.MenuItems{
+	  margin-left:auto;
+	  padding-right:2em;
 	  display:visible;
 	  ul{
 		display:flex; 
-		  align-items:center;  
+		  align-items:center;
+          width:300px;		 
 	  }
 	
 	  li{
-		  list-style:none;
+		list-style:none;
 	  }
 	
-	  a{
+	  /* a{
 		color:white;
 	  margin-left:40px;
 	  text-decoration:none;  
-	  }
+	  } */
 
 	  @media(max-width:590px){
 		  display:none;
 		  }
 	
 	  
+	}
 	`
+	
+ const TeaseLink =  styled(Link)`
+ color:white;
+ margin:left;
+ text-decoration:none;
+ flex:auto;
+ `
+
+ 
+ 

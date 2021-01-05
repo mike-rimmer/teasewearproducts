@@ -1,7 +1,7 @@
-import React, { useState} from 'react';
+import React from 'react';
 import styles from '../components/component.module.css';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+// 
 import {
 	products,
 	bellybands,
@@ -19,7 +19,7 @@ import {
 	splashpants
 } from '../container/pages/XremoveGarmentPage/garmentData';
 
-function getGarmentData (garmentType) {
+export function getGarmentData (garmentType) {
 	let garmentdata;
 	console.log('In getGarmentData', garmentType);
 	switch (garmentType) {
@@ -89,16 +89,21 @@ function getGarmentData (garmentType) {
 
 export const ContactCard = (props) => {
 	const ContactCard = styled.div`
-		margin-top: 2.5em;
-		margin-right: 2em;
+		margin-left:2em;
 		padding: 1em 1em;
-		width: 100%;
+		width:90%;
+		margin: 0 auto;
 		background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 		box-shadow: 7px 16px 16px rgba(12, 12, 12, .5);
-		/* padding-left:30px; */
 		border-radius: 1em;
 		text-align: left;
+		@media(min-width:1030px){
+    	padding:1em;
+	    margin-top:0em;
+	    margin-bottom: 3em;
+}
 	`;
+
 	const Message = styled.h3`
 		margin-top: 60px;
 		font-weight: bold;
@@ -106,14 +111,20 @@ export const ContactCard = (props) => {
 	const Address = styled.p`
 		font-weight: bold;
 		text-align: left;
+		margin-bottom:1em;
 	`;
+
+	const Phone = styled.h5`
+	   margin-bottom:1em;
+	`;
+
 	return (
 		<ContactCard>
 			<h2>Tease Wear Products</h2>
 			<Address>30 Tanner Drive</Address>
 			<Address>Stirling, ON K0K-3E0</Address>
-			<h5>P:(613)477-1113</h5>
-			<h5>C:(613)919-0611</h5>
+			<Phone>P:(613)477-1113</Phone>
+			{/* <h5></h5> */}
 			<h5>Normal Business Hours:</h5>
 			<h5>Monday - Friday from 9:00 am - 4:00pm</h5>
 			<Message>

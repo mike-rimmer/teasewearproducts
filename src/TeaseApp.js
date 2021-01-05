@@ -41,7 +41,7 @@ const TeaseApp = () => {
 			<NavMenu clickHandler={SideDrawerToggleClickHander} />
 			<SideDrawer show={sideDrawerOpen} />
 			{backDrop}
-			<div style={{ marginTop: '80px' }} />
+			{/* <div style={{ marginTop: '80px' }} /> */}
 			{/* End of Navigation Menu */}
 			{/* <Switch> */}
 			{/* Note the route path refers to the localsite url so in the case of localhost

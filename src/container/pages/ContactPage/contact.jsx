@@ -2,21 +2,9 @@ import React from 'react';
 import { ContactCard } from '../../../components/components';
 import ContactForm from '../../../components/Form/form'
 import styled from 'styled-components'
-
-const Wrapper = styled.div`
-    position:relative;
-    top:5em;
-    width:95%;
-    display:flex;
-    margin:0 auto;
-    justify-content: center;
-	@media(max-width:1030px)
-	 {
-	 flex-direction: column;
-}
+import Footer from '../../../components/footer/footer'
 
 
-`
 const Contact = () => {
 	const config = {
 		// api: `${process.env.REACT_APP_API}`,
@@ -69,14 +57,44 @@ const Contact = () => {
 		]
 	};
 	return (
-		<div>
-			{/* <h1>Contact page</h1> */}
+		<Container>
 			<Wrapper>
 				<ContactCard/>
 				<ContactForm config = {config} />
 			</Wrapper>
-		</div>
+			<Footer/>
+			{/* <ContainerFooter>
+			</ContainerFooter> */}
+		</Container>
 	);
 };
+
+const Container = styled.div`
+  display: grid;
+  grid-template-columns:auto;
+  grid-template-rows:auto;
+  grid-template-areas:
+  'wrapper'
+  'foot'; 
+  padding-bottom:1em;
+`;
+
+// const ContainerFooter = styled.div`
+//     grid-area:footer;
+// `;
+
+const Wrapper = styled.div`
+	grid-area: wrapper;
+    top:5em;
+    display:grid;
+	grid-template-columns: 1fr;
+	flex-direction:column;
+	padding-bottom:1em;
+	@media(min-width:1030px)
+	 {
+	 padding:2em;
+	 grid-template-columns: 1fr 1fr;
+}
+`
 
 export default Contact;
